@@ -3,7 +3,7 @@ const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index",
+  entry: "./src/index.js",
   mode: "development",
   devServer: {
     contentBase: path.join(__dirname, "dist"),
@@ -22,7 +22,14 @@ module.exports = {
           presets: ["@babel/preset-react"],
         },
       },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      }
     ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],    
   },
   plugins: [
     new ModuleFederationPlugin({

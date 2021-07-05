@@ -1,0 +1,38 @@
+.sidebar {
+    width: 30%;
+    height: 100vh;
+    box-shadow: 2px 2px grey;
+    position: relative;
+}
+
+.menu {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    transform: translateY(-50%);    
+}
+
+.menu ul {
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.menu li:hover {
+    background-color: rgb(209, 209, 209);
+    cursor: pointer;    
+}
+
+.center {
+    position: absolute;
+    top: 40%;
+    width: 65%;
+    transform: translateY(-50%);
+    transform: translateX(50%);
+}
