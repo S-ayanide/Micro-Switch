@@ -3,7 +3,8 @@
   "workspaces": {
     "packages": [
       "main",
-      "app1"
+      "app1",
+      "app2"
     ]
   },
   "scripts": {

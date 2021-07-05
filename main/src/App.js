@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import './styles.css';
 
-const RemoteButton = React.lazy(() => import("app1/Button"));
+const RemoteButtonApp1 = React.lazy(() => import("app1/Button"));
+const RemoteButtonApp2 = React.lazy(() => import("app2/Button"));
 
 // Component
 const SideBar = ({click}) => {
@@ -32,11 +33,17 @@ const App = () => {
       case 1: return (
                 <div className="center">
                   <React.Suspense fallback="Loading Button">
-                    <RemoteButton />
+                    <RemoteButtonApp1 />
                   </React.Suspense>
                 </div>
               )
-      case 2: return <div className="center">Hello</div>
+      case 2: return (
+                <div className="center">
+                  <React.Suspense fallback="Loading Button">
+                    <RemoteButtonApp2 />
+                  </React.Suspense>
+                </div>
+      )
       default: return <div className="center">Please select an App</div>
     }
   }
